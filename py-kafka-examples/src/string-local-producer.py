@@ -18,7 +18,7 @@ producer = Producer(config)
 
 for i in range(50):
     producer.produce("my-topic1", key=str(i), value="value-"+str(i), on_delivery=(delivery_report))
-    # time.sleep(2)
+    time.sleep(3)
 
 # EOS - Synchronous writes
 producer.flush()
